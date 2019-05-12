@@ -1,3 +1,26 @@
+# Timer App
+> Expanded timer app for effective time management created with React.
+
+## Table of contents
+* [General info](#general-info)
+* [Status](#status)
+* [Technologies](#technologies)
+* [Available Scripts](#available-scripts)
+* [Learn More](#learn-more)
+
+## General info
+This is an educational project developed during the React Course run by Michał Taszycki. The goal is to learn about the various techniques used to create React applications.
+
+## Status
+Project is: _in progress_.
+
+## Technologies
+* React - version 16
+* JavaScript
+* HTML 5
+* CSS 3
+* SCSS
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
