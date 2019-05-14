@@ -16,9 +16,9 @@
     &__bar {
         height: 100%;
         background-color: black;
-    }
-    
-    &--color-red &__bar {
-        background-color: orangered;
+
+        &--color-green {
+            background-color: green;
+        }
     }
 }
