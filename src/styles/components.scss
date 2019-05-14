@@ -1,11 +1,5 @@
 @import "./components/App.scss";
-
-.Timebox {
-    border: $default-border;
-    border-radius: $border-radius;
-    padding: 5px;
-    margin-bottom: 10px;
-}
+@import "./components/Timebox.scss";
 
 .TimeboxEditor, .TimeboxCreator {
     text-align: right;
@@ -21,10 +15,6 @@
 
 .TimeboxEditor {
     background-color: darken( aquamarine, 50);
-}
-
-.Timebox {
-    background-color: #ffaaaa;
 }
 
 .CurrentTimebox {
