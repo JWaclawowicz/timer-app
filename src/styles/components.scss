@@ -2,10 +2,7 @@
 @import "./components/Timebox.scss";
 @import "./components/TimeboxCreator.scss";
 @import "./components/TimeboxEditor.scss";
-
-.CurrentTimebox {
-    background-color: #ffffaa;
-}
+@import "./components/CurrentTimebox.scss";
 
 input {
     min-width: 60%;
@@ -16,13 +13,6 @@ input {
 button{
     font-size: 16px;
     margin-left: 10px;
-}
-
-.CurrentTimebox {
-    border: $default-border;
-    border-radius: $border-radius;
-    padding: 20px;
-    text-align: center;
 }
 
 .Clock {
