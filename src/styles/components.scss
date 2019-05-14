@@ -3,6 +3,7 @@
 @import "./components/TimeboxCreator.scss";
 @import "./components/TimeboxEditor.scss";
 @import "./components/CurrentTimebox.scss";
+@import "./components/Clock.scss";
 
 input {
     min-width: 60%;
@@ -13,10 +14,6 @@ input {
 button{
     font-size: 16px;
     margin-left: 10px;
-}
-
-.Clock {
-    color: orangered;
 }
 
 .progress {
