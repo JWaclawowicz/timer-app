@@ -1,5 +1,7 @@
 import React from "react";
-import { TimeboxEditor, CurrentTimebox } from "./remaining-components";
+
+import { CurrentTimebox } from "./remaining-components";
+import TimeboxEditor from "./TimeboxEditor";
 
 class EditableTimebox extends React.Component {
     state = {
