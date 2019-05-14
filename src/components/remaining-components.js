@@ -1,24 +1,8 @@
 import React from "react";
 import uuid from "uuid";
-import classNames from "classnames";
 
 import Clock from "./Clock";
-
-function ProgressBar({ className = "", percent = 33, big = false, color = null }) {
-    let progressClassName = classNames(
-        "progress",
-        className,
-        {
-            "progress--big": big,
-            "progress--color-red": color === "red"
-        }
-    );
-    return (
-        <div className={progressClassName}>
-            <div className="progress__bar" style={{width: `${percent}%`}}></div>
-        </div>
-    );
-}
+import ProgressBar from "./ProgressBar";
 
 function TimeboxEditor(props) {
     const { 
