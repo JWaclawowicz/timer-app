@@ -11,7 +11,6 @@ class TimeboxList extends React.Component {
             { id: "c", title: "Uczę się BEM", totalTimeInMinutes: 5 },
         ]
     }
-
     addTimebox = (timebox) => {
         this.setState(prevState => {
             const timeboxes = [timebox, ...prevState.timeboxes];
@@ -32,7 +31,6 @@ class TimeboxList extends React.Component {
             return { timeboxes };
         })
     }
-
     handleCreate = (createdTimebox) => {
         this.addTimebox(createdTimebox);
     }
@@ -54,4 +52,4 @@ class TimeboxList extends React.Component {
     }
 }
 
-export { TimeboxList };
+export default TimeboxList;
