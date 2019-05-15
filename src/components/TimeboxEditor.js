@@ -1,4 +1,5 @@
 import React from "react";
+import classNames from "classnames";
 
 function TimeboxEditor(props) {
     const { 
@@ -9,8 +10,14 @@ function TimeboxEditor(props) {
         onTotalTimeInMinutesChange,
         onConfirm
     } = props;
+    let timeboxEditorClassName = classNames(
+        "TimeboxEditor",
+        {
+            "inactive": !isEditable
+        }
+    );
     return (
-        <div className={`TimeboxEditor ${isEditable ? "" : "inactive"}`}>
+        <div className={timeboxEditorClassName}>
             <label>
                 Co robisz?
                 <input 
