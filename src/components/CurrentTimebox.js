@@ -1,4 +1,5 @@
 import React from "react";
+import classNames from "classnames";
 
 import Clock from "./Clock";
 import ProgressBar from "./ProgressBar";
@@ -68,8 +69,14 @@ class CurrentTimebox extends React.Component {
         const minutesLeft = Math.floor(timeLeftInSeconds / 60);
         const secondsLeft = Math.floor(timeLeftInSeconds % 60);
         const progressInPercent = (elapsedTimeInSeconds / totalTimeInSeconds) * 100.0;
+        let currentTimeboxClassName = classNames(
+            "CurrentTimebox",
+            {
+                "inactive": isEditable
+            }
+        );
         return (
-            <div className={`CurrentTimebox ${isEditable ? "inactive" : ""}`}>
+            <div className={currentTimeboxClassName}>
                 <h1>{title}</h1>
                 <Clock minutes={minutesLeft} seconds={secondsLeft} className={isPaused ? "inactive" : ""}/>
                 <ProgressBar 
