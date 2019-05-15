@@ -6,9 +6,9 @@ import TimeboxCreator from "./TimeboxCreator";
 class TimeboxList extends React.Component {
     state = {
         timeboxes: [
-            { id: "a", title: "Uczę się CSS in JS", totalTimeInMinutes: 25 },
-            { id: "b", title: "Uczę się SASS", totalTimeInMinutes: 15 },
-            { id: "c", title: "Uczę się BEM", totalTimeInMinutes: 5 },
+            { id: "a", title: "Uczę się o console", totalTimeInMinutes: 25 },
+            { id: "b", title: "Uczę się debugować", totalTimeInMinutes: 15 },
+            { id: "c", title: "Uczę się TDD", totalTimeInMinutes: 5 },
         ]
     }
     addTimebox = (timebox) => {

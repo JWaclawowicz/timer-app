@@ -5,7 +5,7 @@ import TimeboxEditor from "./TimeboxEditor";
 
 class EditableTimebox extends React.Component {
     state = {
-        title: "Uczę się CSS!",
+        title: "Uczę się Testować!",
         totalTimeInMinutes: 20,
         isEditable: true
     }
