@@ -6,7 +6,7 @@ import TimeboxEditor from "./TimeboxEditor";
 class EditableTimebox extends React.Component {
     state = {
         title: "Uczę się Testować!",
-        totalTimeInMinutes: 20,
+        totalTimeInMinutes: 3,
         isEditable: false
     }
     handleTitleChange = (event) => {
