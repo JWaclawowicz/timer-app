@@ -32,21 +32,27 @@ class TimeboxList extends React.Component {
         })
     }
     handleCreate = (createdTimebox) => {
-        this.addTimebox(createdTimebox);
+        try {
+            this.addTimebox(createdTimebox);
+        } catch (error) {
+            console.log("Jest błąd przy tworzeniu timeboxa:", error);
+        }
     }
     render() {
         return (
             <>
                 <TimeboxCreator onCreate={this.handleCreate} />
-                {this.state.timeboxes.map((timebox, index) => (
-                    <Timebox 
-                        key={timebox.id} 
-                        title={timebox.title} 
-                        totalTimeInMinutes={timebox.totalTimeInMinutes}
-                        onDelete={() => this.removeTimebox(index)}
-                        onEdit={() => this.updateTimebox(index, {...timebox, title: "Updated timebox"})}
-                    />
-                ))}
+                {
+                    this.state.timeboxes.map((timebox, index) => (
+                        <Timebox 
+                            key={timebox.id} 
+                            title={timebox.title} 
+                            totalTimeInMinutes={timebox.totalTimeInMinutes}
+                            onDelete={() => this.removeTimebox(index)}
+                            onEdit={() => this.updateTimebox(index, {...timebox, title: "Updated timebox"})}
+                        />
+                    ))
+                }
             </>
         )
     }
