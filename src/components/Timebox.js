@@ -10,7 +10,15 @@ function Timebox({ title, totalTimeInMinutes, onDelete, onEdit }) {
         </div>
     )
 }
-Timebox.propTypes ={
+Timebox.defaultProps = {
+    onDelete: function(event) {
+        console.log(event.type);
+    },
+    onEdit: function(event) {
+        console.log(event.type);
+    }
+}
+Timebox.propTypes = {
     title: PropTypes.string.isRequired,
     totalTimeInMinutes: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
     onDelete: PropTypes.func.isRequired,
