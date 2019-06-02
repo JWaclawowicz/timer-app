@@ -16,5 +16,19 @@ function ProgressBar({ className = "", percent = 33, big = false, color = null }
         </div>
     );
 }
+function numberType(props, propName, componentName) {
+    if (typeof props[propName] !== "number") {
+        return new Error(`Invalid prop '${propName}' supplied to component '${componentName}'. It has to be a number.`);
+    }
+}
+function numberFrom0To100Type(props, propName, componentName) {
+    if (props[propName] < 0 || props[propName] > 100) {
+        return new Error(`Invalid prop '${propName}' supplied to component '${componentName}'. It has to be between 0 and 100.`);         
+    }
+    return numberType(props, propName, componentName);
+}
+ProgressBar.propTypes = {
+    percent: numberFrom0To100Type
+}
 
 export default ProgressBar;
