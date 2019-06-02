@@ -1,5 +1,6 @@
 import React from "react";
 import classNames from "classnames";
+import PropTypes from "prop-types";
 
 function ProgressBar({ className = "", percent = 33, big = false, color = null }) {
     let progressClassName = classNames(
@@ -28,7 +29,8 @@ function numberFrom0To100Type(props, propName, componentName) {
     return numberType(props, propName, componentName);
 }
 ProgressBar.propTypes = {
-    percent: numberFrom0To100Type
+    percent: numberFrom0To100Type,
+    color: PropTypes.oneOf(['red', 'green', 'blue'])
 }
 
 export default ProgressBar;
